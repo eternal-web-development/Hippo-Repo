@@ -32,11 +32,21 @@ body {
   border: 1px solid var(--red-color);
 }
 .project-tile {
-  border: 1px solid yellow;
+	border: 1px solid yellow;
+	width: fit-content;
 }
 #tile-container {
-  background-color: beige;
-  border: 3px solid blue;
-  display: flex;
-  flex-direction: row;
+	background-color: beige;
+	border: 3px solid blue;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	row-gap: 1rem;
+}
+hr {
+	border: 4px solid green;
+}
+#contacts,
+footer {
+	background-color: #303841;
 }
