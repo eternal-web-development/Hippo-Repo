@@ -1,13 +1,35 @@
+:root {
+  --red-color:#be3144;
+  --black-color:#232325;
+  --white-color:#f0f0f0;
+}
 * {
   margin:0;
   padding:0;
   box-sizing:border-box;
   border: 1px solid gray;
 }
+body {
+  line-height:1.5;
+}
+#navbar {
+  background-color: var(--red-color);
+}
+#navbar li {
+  width:fit-content;
+  font-size:28px;
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-link:link,.nav-link:visited, .nav-link:hover, .nav-link:active {
+  color:var(--white-color);
+}
+
 .project-tile img {
   width: 150px;
   gap:4rem;
-  border: 1px solid red;
+  border: 1px solid var(--red-color);
 }
 .project-tile {
   border: 1px solid yellow;
