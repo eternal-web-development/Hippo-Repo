@@ -40,18 +40,9 @@ body {
 }
 #welcome-section {
 	background: linear-gradient(90deg, #373a3d 30%, black);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 #welcome-section {
 	height: 100vh;
-}
-#greeting {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 #greeting h1 {
 	font-size: 3.5rem;
@@ -65,26 +56,14 @@ body {
 	background-color: #45567d;
 	height: 200vh;
 	padding: 20px 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
 }
 .sub-heading {
 	font-size: 3rem;
 	font-family: "Mochiy Pop One", sans-serif;
 	border-bottom: 2px solid var(--white-color);
 }
-#tile-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 20px;
-}
 .project-tile img {
 	max-width: 350px;
-	gap: 4rem;
 	border: 1px solid var(--red-color);
 }
 .project-tile {
@@ -97,10 +76,6 @@ body {
 #contacts-container {
 	border: 1px solid white;
 	height: 80vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 #contacts-container h2 {
 	font-size: 4.25rem;
@@ -130,17 +105,9 @@ footer {
 }
 #contacts {
 	height: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
 }
 .socialm-link {
 	height: 45px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 	text-decoration: none;
 }
 .socialm-link:link,
@@ -154,10 +121,6 @@ footer {
 }
 footer {
 	height: 20vh;
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-	justify-content: center;
 	border-top: 4px solid var(--red-color);
 }
 footer p {
