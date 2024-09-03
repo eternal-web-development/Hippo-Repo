@@ -10,6 +10,7 @@
 }
 body {
 	line-height: 1.5;
+	font-family: "Poppins", sans-serif;
 }
 #navbar {
 	background-color: var(--red-color);
@@ -53,7 +54,8 @@ body {
 	align-items: center;
 }
 #greeting h1 {
-	font-size: 4.5rem;
+	font-size: 3.5rem;
+	font-family: "Mochiy Pop One", sans-serif;
 }
 #greeting p {
 	color: var(--red-color);
@@ -70,7 +72,8 @@ body {
 }
 .sub-heading {
 	font-size: 3rem;
-  border-bottom: 2px solid var(--white-color);
+	font-family: "Mochiy Pop One", sans-serif;
+  	border-bottom: 2px solid var(--white-color);
 }
 #tile-container {
 	display: flex;
@@ -102,6 +105,9 @@ body {
 #contacts-container h2 {
   font-size: 4.25rem;
   line-height:1;
+}
+#contacts-container h2 {
+font-family: "Mochiy Pop One", sans-serif;
 }
 #contacts-container p {
   font-size:2rem;
