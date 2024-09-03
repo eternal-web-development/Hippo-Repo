@@ -3,6 +3,10 @@
 	--white-color: #f0f0f0;
 	--darkblue-color: #303841;
 }
+html {
+	/*Setting the default font size for the entire site. This will set the default font-size as 10px for the web page*/
+	font-size: 62.5%;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -11,6 +15,8 @@
 body {
 	line-height: 1.5;
 	font-family: "Poppins", sans-serif;
+	display: grid;
+	grid-template-rows: 100vh 200vh 100vh;
 }
 #navbar {
 	background-color: var(--red-color);
@@ -40,9 +46,19 @@ body {
 }
 #welcome-section {
 	background: linear-gradient(90deg, #373a3d 30%, black);
+	grid-row-start: 1;
 }
 #welcome-section {
 	height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 50vw 1fr;
+	align-items: center;
+	justify-items: center;
+}
+#greeting {
+	grid-column-start: 2;
+	grid-row-start: 2;
 }
 #greeting h1 {
 	font-size: 3.5rem;
@@ -52,10 +68,41 @@ body {
 	color: var(--red-color);
 	font-size: 3rem;
 }
+/*Styles --Start---------Projects (Section 2)---------------*/
 #projects {
 	background-color: #45567d;
 	height: 200vh;
 	padding: 20px 0;
+	grid-row-start: 2; /*this belongs body element's Grid*/
+	display: grid; /*this is section 2, projects' grid*/
+	grid-template-rows: 30vh 1fr 1fr 30vh;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+.col-1 {
+	grid-column-start: 1;
+}
+.col-2 {
+	grid-column-start: 2;
+}
+.col-3 {
+	grid-column-start: 3;
+}
+.col-e {
+	grid-column-end: -1;
+}
+.row-1 {
+	grid-row-start: 1;
+}
+.row-2 {
+	grid-row-start: 2;
+}
+.row-3 {
+	grid-row-start: 3;
+}
+.row-4 {
+	grid-row-start: 4;
 }
 .sub-heading {
 	font-size: 3rem;
@@ -64,11 +111,6 @@ body {
 }
 .project-tile img {
 	max-width: 350px;
-	border: 1px solid var(--red-color);
-}
-.project-tile {
-	border: 1px solid yellow;
-	width: fit-content;
 }
 #profile-link {
 	font-size: 1.75rem;
@@ -76,6 +118,7 @@ body {
 #contacts-container {
 	border: 1px solid white;
 	height: 80vh;
+	grid-row-start: 3;
 }
 #contacts-container h2 {
 	font-size: 4.25rem;
