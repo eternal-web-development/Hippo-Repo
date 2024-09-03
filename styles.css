@@ -73,7 +73,7 @@ body {
 .sub-heading {
 	font-size: 3rem;
 	font-family: "Mochiy Pop One", sans-serif;
-  	border-bottom: 2px solid var(--white-color);
+	border-bottom: 2px solid var(--white-color);
 }
 #tile-container {
 	display: flex;
@@ -92,28 +92,28 @@ body {
 	width: fit-content;
 }
 #profile-link {
-  font-size:1.75rem ;
+	font-size: 1.75rem;
 }
 #contacts-container {
-  border: 1px solid white;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	border: 1px solid white;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 #contacts-container h2 {
-  font-size: 4.25rem;
-  line-height:1;
+	font-size: 4.25rem;
+	line-height: 1;
 }
 #contacts-container h2 {
-font-family: "Mochiy Pop One", sans-serif;
+	font-family: "Mochiy Pop One", sans-serif;
 }
 #contacts-container p {
-  font-size:2rem;
-  font-weight:lighter;
-  font-style: italic;
-  line-height:1;
+	font-size: 2rem;
+	font-weight: lighter;
+	font-style: italic;
+	line-height: 1;
 }
 .socialm-icons {
 	width: 40px;
@@ -133,13 +133,13 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-  align-items: center;
+	align-items: center;
 	gap: 30px;
 }
 .socialm-link {
 	height: 45px;
 	display: flex;
-	flex-direction: row;	
+	flex-direction: row;
 	align-items: center;
 	text-decoration: none;
 }
