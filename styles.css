@@ -117,14 +117,22 @@ body {
 }
 #contacts-container {
 	border: 1px solid white;
-	height: 80vh;
 	grid-row-start: 3;
+	display: grid; /*Grid layout for the Social media contacts section(section 3)*/
+	grid-template-rows: 1fr 40vh 1fr;
+	grid-template-columns: 1fr 60vw 1fr;
+	justify-items: center;
+}
+#contacts-container h2,
+#contacts-container p,
+#contacts {
+	grid-row-start: 2;
+	grid-column-start: 2;
 }
 #contacts-container h2 {
 	font-size: 4.25rem;
 	line-height: 1;
-}
-#contacts-container h2 {
+	align-self: flex-start;
 	font-family: "Mochiy Pop One", sans-serif;
 }
 #contacts-container p {
@@ -132,13 +140,15 @@ body {
 	font-weight: lighter;
 	font-style: italic;
 	line-height: 1;
+	position: relative;
+	top: 6rem;
 }
 .socialm-icons {
-	width: 40px;
+	width: 30px;
 	height: fit-content;
 }
 .socialm-text {
-	font-size: 28px;
+	font-size: 24px;
 	height: fit-content;
 }
 #contacts-container,
@@ -148,10 +158,18 @@ footer {
 }
 #contacts {
 	height: 100px;
+	align-self: flex-end; /*To align social media links to the bottom-row-grid-line of the cell*/
+	display: flex; /*flex-box for social media links container*/
+	flex-direction: row;
+	column-gap: 2rem;
+	align-items: start;
 }
 .socialm-link {
-	height: 45px;
+	height: 40px;
 	text-decoration: none;
+	display: flex; /* Flex-boxs to each social-link element to align it's children (socialm-icons & socialm-text)*/
+	flex-direction: row;
+	align-items: center;
 }
 .socialm-link:link,
 .socialm-link:visited,
