@@ -58,7 +58,8 @@ body {
 	background-color: var(--lightblue-color);
 }
 #welcome-section {
-	background: linear-gradient(90deg, #373a3d 30%, black);
+	/*background: linear-gradient(90deg, #373a3d 30%, black);*/
+	background: linear-gradient(45deg, #373a3d 30%, #2b2a2a 60%);
 	grid-row-start: 1;
 	height: 100vh;
 	display: grid;
@@ -72,12 +73,14 @@ body {
 	grid-row-start: 2;
 }
 #greeting h1 {
-	font-size: 3.5rem;
+	font-size: 5.5rem;
+	font-weight:600;
 	font-family: var(--heading-font);
 }
 #greeting p {
 	color: var(--red-color);
 	font-size: 3rem;
+	text-indent: 50px;
 }
 /*Styles --Start---------Projects (Section 2)---------------*/
 #projects {
@@ -123,6 +126,7 @@ body {
 }
 .project-tile {
 	background-color: var(--darkblue-color);
+	border:1px solid var(--darkblue-color);
 }
 .project-tile img {
 	max-width: 400px;
@@ -186,8 +190,11 @@ body {
 	position: relative;
 	top: 7.5rem;
 }
+#contacts a:first-child img {
+	width:22px;
+}
 .socialm-icons {
-	width: 30px;
+	width: 27px;
 	height: fit-content;
 }
 .socialm-text {
