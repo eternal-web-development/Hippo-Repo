@@ -74,7 +74,7 @@ body {
 }
 #greeting h1 {
 	font-size: 5.5rem;
-	font-weight:600;
+	font-weight: 600;
 	font-family: var(--heading-font);
 }
 #greeting p {
@@ -126,10 +126,12 @@ body {
 }
 .project-tile {
 	background-color: var(--darkblue-color);
-	border:1px solid var(--darkblue-color);
+	border: 1px solid var(--darkblue-color);
 }
 .project-tile img {
-	max-width: 400px;
+	/*max-width: 400px;*/
+	width: calc((100vw / 3) - 40px);
+	max-width: 100%;
 }
 .tile-text {
 	font-size: 2.5rem;
@@ -167,7 +169,8 @@ body {
 	height: 100vh;
 	display: grid; /*Grid layout for the Social media contacts section(section 3)*/
 	grid-template-rows: 1fr 40vh 1fr;
-	grid-template-columns: 1fr 60vw 1fr;
+	width:100vw;
+	grid-template-columns: 1fr 90vw 1fr;
 	justify-items: center;
 }
 #contacts-container h2,
@@ -191,7 +194,7 @@ body {
 	top: 7.5rem;
 }
 #contacts a:first-child img {
-	width:22px;
+	width: 22px;
 }
 .socialm-icons {
 	width: 27px;
@@ -234,8 +237,7 @@ footer {
 /*Styles --End---------contacts-container (Section 3)---------------*/
 
 footer {
-	
-	height:20vh;
+	height: 20vh;
 	font-size: 20px;
 	border-top: 4px solid var(--red-color);
 	display: grid;
@@ -252,4 +254,10 @@ footer {
 	grid-row-start: 2;
 	grid-column-start: 2;
 	justify-self: left;
+}
+@media screen and (max-width: 1172px) {
+	* {
+		border: 1px solid red;
+	}
+	
 }
