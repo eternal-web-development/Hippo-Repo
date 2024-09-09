@@ -11,6 +11,9 @@ html {
 	box-sizing: border-box;
 	font-size: 62.5%;
 }
+/** {
+	border: 1px solid palegreen;
+}*/
 *,
 *::before,
 *::after {
@@ -22,7 +25,8 @@ body {
 	line-height: 1.5;
 	font-family: var(--normal-font);
 	display: grid;
-	grid-template-rows: 100vh 200vh 80vh;
+	grid-template-rows: 100vh 200vh 80vh 20vh;
+	grid-template-columns: 100%;
 }
 #navbar {
 	width: 100%;
@@ -43,7 +47,7 @@ body {
 #navbar li {
 	width: fit-content;
 	height: inherit;
-	font-size: 23px;
+	font-size: 2.3rem;
 	align-content: center;
 	padding: 0 2rem;
 }
@@ -64,7 +68,7 @@ body {
 	height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-columns: 1fr 50vw 1fr;
+	grid-template-columns: 1fr 100vw 1fr;
 	align-items: center;
 	justify-items: center;
 }
@@ -80,13 +84,12 @@ body {
 #greeting p {
 	color: var(--red-color);
 	font-size: 3rem;
-	text-indent: 50px;
+	text-indent: 5rem;
 }
 /*Styles --Start---------Projects (Section 2)---------------*/
 #projects {
 	background-color: var(--lightblue-color);
-	height: 200vh;
-	padding: 20px 0;
+	padding: 2rem 0;
 	grid-row-start: 2; /*this belongs body element's Grid*/
 	display: grid; /*this is section 2, projects' grid*/
 	grid-template-rows: 30vh 1fr 1fr 30vh;
@@ -94,30 +97,39 @@ body {
 	justify-items: center;
 	align-items: center;
 }
-.col-1 {
+#projects-header {
+	grid-row-start: 1;
+	grid-column: 1/-1;
+}
+#penguin {
+	grid-row-start: 2;
 	grid-column-start: 1;
 }
-.col-2 {
-	grid-column-start: 2;
+#survay-form {
+	grid-row-start: 3;
+	grid-column-start: 1;
 }
-.col-3 {
+#tribute-page {
+	grid-row-start: 2;
 	grid-column-start: 3;
 }
-.col-e {
-	grid-column-end: -1;
-}
-.row-1 {
-	grid-row-start: 1;
-}
-.row-2 {
-	grid-row-start: 2;
-}
-.row-3 {
+#nutrition-bill {
 	grid-row-start: 3;
+	grid-column-start: 2;
 }
-.row-4 {
+#magazine {
+	grid-row-start: 2;
+	grid-column-start: 2;
+}
+#skyline {
+	grid-row-start: 3;
+	grid-column-start: 3;
+}
+#show-button {
 	grid-row-start: 4;
+	grid-column-start: 2;
 }
+
 .sub-heading {
 	font-size: 4rem;
 	font-weight: bold;
@@ -125,25 +137,30 @@ body {
 	border-bottom: 2px solid var(--white-color);
 }
 .project-tile {
-	background-color: var(--darkblue-color);
 	border: 1px solid var(--darkblue-color);
+	height: fit-content;
 }
 .project-tile img {
-	/*max-width: 400px;*/
+	max-width: 500px;
+	background-color: var(--darkblue-color);
 	width: calc((100vw / 3) - 40px);
-	max-width: 100%;
+}
+.project-tile a {
+	border: 1px solid orange;
+	background-color: yellowgreen;
+	height: fit-content;
 }
 .tile-text {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-family: var(--heading-font);
 	color: var(--white-color);
 	background-color: var(--darkblue-color);
 	text-align: center;
 	align-content: center;
-	height: 100px;
+	height: 60px;
 }
 .tile-text-sub {
-	color: var(--white-color);
+	color: transparent;
 	transition: color 0.3s ease-out;
 }
 .project-tile:hover .tile-text-sub {
@@ -166,32 +183,31 @@ body {
 /*Styles --Start---------contacts-container (Section 3)---------------*/
 #contacts-container {
 	grid-row-start: 3;
-	height: 100vh;
+
 	display: grid; /*Grid layout for the Social media contacts section(section 3)*/
-	grid-template-rows: 1fr 40vh 1fr;
-	width:100vw;
-	grid-template-columns: 1fr 90vw 1fr;
+	grid-template-rows: 1fr 15vh 5vh 20vh 1fr;
+
 	justify-items: center;
 }
-#contacts-container h2,
-#contacts-container p,
-#contacts {
+#contacts-container h2 {
 	grid-row-start: 2;
-	grid-column-start: 2;
+}
+#contacts-container p {
+	grid-row-start: 3;
+}
+#contacts {
+	grid-row-start: 4;
 }
 #contacts-container h2 {
 	font-size: 6rem;
-	line-height: 1;
-	align-self: flex-start;
+	height: fit-content;
 	font-family: var(--normal-font);
 }
 #contacts-container p {
 	font-size: 2rem;
 	font-weight: lighter;
 	font-style: italic;
-	line-height: 1;
-	position: relative;
-	top: 7.5rem;
+	height: fit-content;
 }
 #contacts a:first-child img {
 	width: 22px;
@@ -201,17 +217,19 @@ body {
 	height: fit-content;
 }
 .socialm-text {
-	font-size: 24px;
+	font-size: 22px;
 	height: fit-content;
 }
 #contacts {
 	height: 100px;
-	position: relative;
-	top: 15rem; /*To align social media links to the bottom-row-grid-line of the cell*/
+	align-self: end; /*To align social media links to the bottom-row-grid-line of the cell*/
+	width: 100%;
 	display: flex; /*flex-box for social media links container*/
 	flex-direction: row;
-	column-gap: 2rem;
-	align-items: start;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10px; /*gap between social media links*/
 }
 .socialm-link {
 	height: 40px;
@@ -237,7 +255,7 @@ footer {
 /*Styles --End---------contacts-container (Section 3)---------------*/
 
 footer {
-	height: 20vh;
+	grid-row-start: 4;
 	font-size: 20px;
 	border-top: 4px solid var(--red-color);
 	display: grid;
@@ -256,8 +274,55 @@ footer {
 	justify-self: left;
 }
 @media screen and (max-width: 1172px) {
-	* {
-		border: 1px solid red;
+	#projects {
+		grid-template-rows: 30vh 1fr 1fr 1fr 30vh;
+		grid-template-columns: 1fr 1fr;
 	}
-	
+
+	.project-tile {
+		margin-bottom: 0rem;
+	}
+	.project-tile img {
+		width: calc((100vw / 2) - 60px);
+	}
+	#projects-header {
+		grid-row-start: 1;
+		grid-column: 1/-1;
+	}
+	#penguine {
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+	#survay-form {
+		grid-row-start: 3;
+		grid-column-start: 2;
+	}
+	#tribute-page {
+		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+	#nutrition-bill {
+		grid-row-start: 4;
+		grid-column-start: 1;
+	}
+	#magazine {
+		grid-row-start: 2;
+		grid-column-start: 2;
+	}
+	#skyline {
+		grid-row-start: 4;
+		grid-column-start: 2;
+	}
+	#show-button {
+		grid-row-start: 5;
+		grid-column: 1/-1;
+	}
+	.tile-text {
+		height: 80px;
+	}
+}
+@media screen and (max-width: 415px) {
+	.project-tile img {
+		width: 100%;
+	}
 }
