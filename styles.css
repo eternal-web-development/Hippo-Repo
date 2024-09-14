@@ -187,7 +187,10 @@ nav > ul > li > a {
 #contacts-container p {
 	font-size: 2rem;
 	font-style: italic;
-	line-height: 1;
+	height: fit-content;
+}
+#contacts a:first-child img {
+	width: 22px;
 }
 #contacts-container h2,
 #contacts-container p {
@@ -197,6 +200,8 @@ nav > ul > li > a {
 #contacts {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
 	column-gap: 3rem;
 	align-items: center;
