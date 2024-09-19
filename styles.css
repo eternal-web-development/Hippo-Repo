@@ -172,8 +172,22 @@ nav > ul > li > a {
 	padding: 1rem 3rem;
 	margin: 10rem auto;
 }
+#profile-link > span {
+	display: inline-block; /* to apply translate effect */
+}
+#profile-link,
+#profile-link > span {
+	transition: background-color 350ms linear, transform 350ms linear;
+}
+#profile-link:hover {
+	background-color: var(--red-color);
+}
+#profile-link:hover > span {
+	transform: translateX(1rem);
+}
 #contacts-container {
 	width: inherit; /*Section 3 (page 3)begins*/
+	height: 85vh; /* to fit section 3 and footer inside a single page */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -186,6 +200,7 @@ nav > ul > li > a {
 }
 #contacts-container p {
 	font-size: 2rem;
+	font-weight: 200;
 	font-style: italic;
 	height: fit-content;
 }
@@ -204,8 +219,6 @@ nav > ul > li > a {
 	align-items: center;
 	justify-content: center;
 	column-gap: 3rem;
-	align-items: center;
-	flex-wrap: wrap;
 	margin-top: 4rem;
 }
 #contacts img {
@@ -223,8 +236,14 @@ nav > ul > li > a {
 	text-decoration: none;
 	color: var(--white-color);
 	font-weight: 600;
+	transition: transform 350ms ease-out;
 }
-
+.socialm-link:hover {
+	transform: translateY(1rem);
+}
+.socialm-text {
+	font-weight: 400;
+}
 footer {
 	width: inherit;
 	background-color: var(--bluishgray-color);
@@ -239,4 +258,42 @@ footer > p {
 	width: fit-content;
 	display: inline-block;
 }
-/*Screen sizes upto 1200px*/
+
+@media screen and (min-width: 240em) {
+	html {
+		font-size: 25px; /* 3840px */
+		/* Ultra HD tv*/
+	}
+}
+@media screen and (min-width: 120em) and (max-width: 239.93em) {
+	html {
+		font-size: 20px; /* 1920px and 3839px */
+	} /* High Definision tv*/
+}
+@media screen and (min-width: 75em) and (max-width: 119.93em) {
+	html {
+		font-size: 10px; /* 1200px and 1919px */
+	} /* Large Screens*/
+}
+@media screen and (min-width: 50em) and (max-width: 74.93em) {
+	html {
+		font-size: 14px; /* 800px and 1199px */
+	} /* Tablets*/
+}
+@media screen and (min-width: 20em) and (max-width: 29.93em) {
+	html {
+		font-size: 8px; /* 320px and 479px */
+	} /* Mobile Devices*/
+	#contacts {
+		margin: 2rem auto 0 auto;
+		flex-direction: column;
+		align-items: start;
+		width: fit-content;
+	}
+
+	footer {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+}
